@@ -1,0 +1,51 @@
+<% @title = "Listing offers" %>
+
+<% content_for :description do %>
+<p>Edit this template in <code>app/views/offers/index.html.erb</code>.</p>
+<% end %>
+
+<% content_for :actions do %>
+<%= link_to new_offer_path, class: 'btn btn-primary btn-large pull-right' do %>
+<%= fa_icon_tag "plus" %> Add Offer
+<% end %>
+<% end %>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="sheet sheet-condensed">
+        <div class="sheet-inner">
+          <table class="table">
+            <thead>
+              <tr>
+                                <th>Title</th>
+                                <th>Description</th>
+                                <th>Claimurl</th>
+                                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @offers.each do |offer| %>
+              <tr>
+                                <td><%= offer.title %></td>
+                                <td><%= offer.description %></td>
+                                <td><%= offer.claimurl %></td>
+                                <td class="actions">
+                  <%= link_to fa_icon_tag("eye"), offer, rel: 'tooltip', title: 'Show' %>
+                  <%= link_to fa_icon_tag("pencil"), edit_offer_path(offer), rel: 'tooltip', title: 'Edit' %>
+                  <%= link_to fa_icon_tag("trash-o"), offer, rel: 'tooltip', title: 'Delete',
+                  data: { confirm: 'Are you sure?' }, method: :delete %>
+                </td>
+              </tr>
+              <% end %>
+              <% if @offers.length == 0 %>
+              <tr><td colspan=42 class='text-center'>No offers.</td></tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div><!-- /.sheet-inner -->
+      </div><!-- /.sheet -->
+
+                </div>
+  </div>
+</div>
