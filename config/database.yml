@@ -15,12 +15,14 @@ default: &default
 
 
 development:
-  <<: *default
-#  database: db/development.sqlite3
-  #database: rvip
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: vdjjeaufbifwjy
+  password: 5eba6a426c1d86182ee4f5c55cc05b32bc315421a9b61f4a8207143272fa62cf
+  host:     ec2-54-83-49-109.compute-1.amazonaws.com
+  database: d8fi2psmn3de51
+
 test:
   <<: *default
   #database: db/test.sqlite3
