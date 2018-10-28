@@ -1,6 +1,9 @@
 class OffersController < ApplicationController
   before_action :set_offer, only: [:show, :edit, :update, :destroy]
+#layout false, :only => :show
 
+#layout :home
+layout 'home', :except => :edit
   # GET /offers
   # GET /offers.json
   def index

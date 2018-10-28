@@ -1,64 +1,15 @@
-<% @title = "Showing offer" %>
+<%# @title = "Showing offer" %>
+ <%= image_tag image_path(@offer.image_url.to_s), width: '100%', class: 'mr-2'%>
 
-<% content_for :description do %>
-  <p>Edit this template in <code>app/views/offers/show.html.erb</code>.</p>
-  <% end %>
-
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <div class="sheet sheet-condensed">
-          <div class="sheet-inner p30">
-            <div class="form-horizontal">
-                              <div class="form-inputs">
-                 <div class="form-group">
-                    <label class="col-md-2 control-label">Title</label>
-                    <div class="col-md-8">
-                     <div class="form-control uneditable-input">
-                        <span>
-                          <%= @offer.title %>
-                        </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-                              <div class="form-inputs">
-                 <div class="form-group">
-                    <label class="col-md-2 control-label">Description</label>
-                    <div class="col-md-8">
-                     <div class="form-control uneditable-input">
-                        <span>
-                          <%= @offer.description %>
-                        </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-                              <div class="form-inputs">
-                 <div class="form-group">
-                    <label class="col-md-2 control-label">Claimurl</label>
-                    <div class="col-md-8">
-                     <div class="form-control uneditable-input">
-                        <span>
-                          <%= @offer.claimurl %>
-                        </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-<%= image_tag(@offer.image_url.to_s) %>
-                            <div class="form-actions col-md-offset-2">
-                <%= link_to fa_icon_tag("pencil") + ' Edit', edit_offer_path(@offer), class: 'btn btn-primary' %>
-                <%= link_to 'Back', offers_path, class: 'btn' %>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="panel panel-default">
+ <div class="panel-body">
+   <h4><%= @offer.title %></h4>
+   <h4><%= @offer.claimurl %></h4>
+   <p><%= markdown @offer.description %></p>
   </div>
+ </div>
+  <!--<div class="form-actions col-md-offset-2">-->
+                <%#= link_to fa_icon_tag("pencil") + ' Edit', edit_offer_path(@offer), class: 'btn btn-primary' %>
+                <%#= link_to 'Back', offers_path, class: 'btn' %>
+  <!--</div>-->
+           
