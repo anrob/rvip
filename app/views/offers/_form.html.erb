@@ -21,7 +21,7 @@
 
     <%= f.form_group :image do |f| %>
         <%= f.label :image, class: 'control-label col-md-2' %>
-        <%= image_tag image_path(@offer.image_url.to_s), width: '20%', class: 'mr-2'%>
+        <%#= image_tag image_path(@offer.image_url.to_s), width: '20%', class: 'mr-2'%>
         <%= f.file_field :attachment, class: 'form-control' %>
       <div class='col-md-8'>
         <%#= f.file_field :image, class: 'form-control' %>
