@@ -4,7 +4,8 @@
  <%#= link_to(image_tag(@offer.attachment.preview(resize: "200x200>")),  rails_blob_path(@offer.attachment, disposition: "attachment")) %>
  <%#= link_to(image_tag(@offer.attachment.variant(resize: "200x200>")),  rails_blob_path(@offer.attachment, disposition: "attachment"))%>
 <%# end %>
-<%= image_tag, rails_blob_path(@offer.attachment), width: '100%', class: 'mr-2' %>
+<!-- <%= image_tag, rails_blob_path(@offer.attachment), width: '100%', class: 'mr-2' %> -->
+<%= image_tag @offer.image %>
 <%= link_to "Download file", rails_blob_path(@offer.attachment, disposition: "attachment") %>
 <div class="panel panel-default">
  <div class="panel-body">
