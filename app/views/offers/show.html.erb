@@ -1,6 +1,8 @@
 <%# @title = "Showing offer" %>
 <% if @offer.attachment.previewable? %>
  <%= image_tag image_path(@offer.attachment), width: '100%', class: 'mr-2' %>
+ <%= link_to(image_tag(@offer.attachment.preview(resize: "200x200>")),  rails_blob_path(@offer.attachment, disposition: "attachment"))
+         %>
  <%#= link_to(image_tag(@offer.attachment.preview(resize: "200x200>")),  rails_blob_path(@offer.attachment, disposition: "attachment"))%>
 <% end %>
 <div class="panel panel-default">
