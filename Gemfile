@@ -19,6 +19,7 @@ gem 'jquery-rails'
 #gem 'html-pipeline'
 #gem 'github-markdown'
 gem 'redcarpet'
+gem "aws-sdk-s3", require: false
 
 
 # Use Puma as the app server
