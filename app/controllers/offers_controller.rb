@@ -29,15 +29,16 @@ layout 'home', :except => :edit
   def create
     @offer = Offer.new(offer_params)
     @offer.attachment.attach(params[:offer][:attachment])
-    respond_to do |format|
-      if @offer.save
-        format.html { redirect_to @offer, notice: 'Offer was successfully created.' }
-        format.json { render :show, status: :created, location: @offer }
-      else
-        format.html { render :new }
-        format.json { render json: @offer.errors, status: :unprocessable_entity }
-      end
-    end
+    @offer.save!
+    # respond_to do |format|
+    #   if @offer.save
+    #     format.html { redirect_to @offer, notice: 'Offer was successfully created.' }
+    #     format.json { render :show, status: :created, location: @offer }
+    #   else
+    #     format.html { render :new }
+    #     format.json { render json: @offer.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # PATCH/PUT /offers/1
