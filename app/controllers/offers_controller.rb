@@ -28,7 +28,7 @@ layout 'home', :except => :edit
   # POST /offers.json
   def create
     @offer = Offer.new(offer_params)
-
+    @offer.attachment.attach(params[:offer][:attachment])
     respond_to do |format|
       if @offer.save
         format.html { redirect_to @offer, notice: 'Offer was successfully created.' }
@@ -72,6 +72,6 @@ layout 'home', :except => :edit
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def offer_params
-      params.require(:offer).permit(:title, :description, :claimurl, :image)
+      params.require(:offer).permit(:title, :description, :claimurl, :image, :attachment)
     end
 end
