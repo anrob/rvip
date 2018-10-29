@@ -13,7 +13,7 @@
 
 //= require jquery
 //= require jquery_ujs
-//= require dresssed
+// require dresssed
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
