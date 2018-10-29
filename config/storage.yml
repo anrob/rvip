@@ -13,13 +13,17 @@ amazon:
   secret_access_key: <%= ENV['BUCKETEER_AWS_SECRET_ACCESS_KEY'] %>
   region: <%= ENV['BUCKETEER_AWS_REGION'] %>
   bucket: <%= ENV['BUCKETEER_BUCKET_NAME'] %>
-# Use rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
-# amazon:
+
+# development:
+# # Use rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
+# # amazon:
 #   service: S3
-#   access_key_id: <%= Rails.application.credentials.dig(:aws, :access_key_id) %>
-#   secret_access_key: <%= Rails.application.credentials.dig(:aws, :secret_access_key) %>
+#   # access_key_id: <%= Rails.application.credentials.dig(:aws, :access_key_id) %>
+#   # secret_access_key: <%= Rails.application.credentials.dig(:aws, :secret_access_key) %>
+#   access_key_id: AKIAIR6ILV424RWGSLEA
+#   secret_access_key: 7ydvQZHKADiNuPuAWmHFqIUtZi+k6gBWC06kDotY
 #   region: us-east-1
-#   bucket: your_own_bucket
+#   bucket: bucketeer-77c57d54-8709-42e9-92e4-b443bf1513d3
 
 # Remember not to checkin your GCS keyfile to a repository
 # google:
