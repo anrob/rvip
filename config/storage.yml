@@ -13,33 +13,3 @@ amazon:
   secret_access_key: <%= ENV['BUCKETEER_AWS_SECRET_ACCESS_KEY'] %>
   region: <%= ENV['BUCKETEER_AWS_REGION'] %>
   bucket: <%= ENV['BUCKETEER_BUCKET_NAME'] %>
-
-# development:
-# # Use rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
-# # amazon:
-#   service: S3
-#   # access_key_id: <%= Rails.application.credentials.dig(:aws, :access_key_id) %>
-#   # secret_access_key: <%= Rails.application.credentials.dig(:aws, :secret_access_key) %>
-#   access_key_id: AKIAIR6ILV424RWGSLEA
-#   secret_access_key: 7ydvQZHKADiNuPuAWmHFqIUtZi+k6gBWC06kDotY
-#   region: us-east-1
-#   bucket: bucketeer-77c57d54-8709-42e9-92e4-b443bf1513d3
-
-# Remember not to checkin your GCS keyfile to a repository
-# google:
-#   service: GCS
-#   project: your_project
-#   credentials: <%= Rails.root.join("path/to/gcs.keyfile") %>
-#   bucket: your_own_bucket
-
-# Use rails credentials:edit to set the Azure Storage secret (as azure_storage:storage_access_key)
-# microsoft:
-#   service: AzureStorage
-#   storage_account_name: your_account_name
-#   storage_access_key: <%= Rails.application.credentials.dig(:azure_storage, :storage_access_key) %>
-#   container: your_container_name
-
-# mirror:
-#   service: Mirror
-#   primary: local
-#   mirrors: [ amazon, google, microsoft ]
