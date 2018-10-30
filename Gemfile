@@ -14,6 +14,8 @@ gem 'rails', '~> 5.2.1'
 gem 'pg'
 gem 'carrierwave'
 gem 'jquery-rails'
+gem 'devise'
+gem 'milia'
 
 
 #gem 'html-pipeline'
@@ -75,3 +77,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
