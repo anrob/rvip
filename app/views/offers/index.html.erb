@@ -15,9 +15,9 @@
           <table class="table">
             <thead>
               <tr>
-                                <th>Title</th>
-                                <th>Description</th>
-                                <th>Claimurl</th>
+                                <th>Business Name</th>
+                                <th>Offer ID</th>
+                                <th>Offer Details</th>
                                 <th></th>
               </tr>
             </thead>
@@ -25,7 +25,7 @@
               <% @offers.each do |offer| %>
               <tr>
                                 <td><%= offer.title %></td>
-                                <td><%#= offer.description %></td>
+                                <td><%= offer.id %></td>
                                 <td><%= offer.claimurl %></td>
                                 <td class="actions">
                   <%= link_to fa_icon_tag("eye"), offer, rel: 'tooltip', title: 'Show' %>
